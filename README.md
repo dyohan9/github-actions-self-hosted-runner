@@ -98,8 +98,7 @@ Required permissions:
 
 ```
 admin:org
-repo
-workflow
+repo:workflow
 ```
 
 ---
@@ -280,26 +279,6 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-
----
-
-## Roadmap
-
-- [ ] Node.js image
-- [ ] Bun image
-- [ ] Python image
-- [ ] uv
-- [ ] Java 21
-- [ ] Flutter
-- [ ] Android SDK
-- [ ] Maven
-- [ ] Gradle
-- [ ] kubectl
-- [ ] Helm
-- [ ] Terraform
-- [ ] AWS CLI
-- [ ] Google Cloud SDK
-- [ ] Azure CLI
 
 ---
 
