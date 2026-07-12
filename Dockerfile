@@ -7,8 +7,8 @@ ARG DOCKER_GID=112
 # ----------------------------
 # Dependências
 # ----------------------------
-
 RUN apt-get update && apt-get install -y \
+    ca-certificates \
     curl \
     jq \
     git \
@@ -16,12 +16,28 @@ RUN apt-get update && apt-get install -y \
     gnupg \
     lsb-release \
     build-essential \
-    libssl-dev \
-    libffi-dev \
     python3 \
     python3-pip \
     python3-venv \
-    ca-certificates
+    libssl-dev \
+    libffi-dev \
+    libglib2.0-0 \
+    libcairo2 \
+    libcairo-gobject2 \
+    libgdk-pixbuf-2.0-0 \
+    libpango-1.0-0 \
+    libpangocairo-1.0-0 \
+    shared-mime-info \
+    fonts-dejavu-core \
+    && rm -rf /var/lib/apt/lists/*
+
+# ----------------------------
+# NodeJS
+# ----------------------------
+
+RUN curl -fsSL https://deb.nodesource.com/setup_22.x | bash -
+
+RUN apt-get install -y nodejs
 
 # ----------------------------
 # Docker CLI
